@@ -1,0 +1,20 @@
+[
+  {
+     "title": "New Event2",
+     "eventDate": "2024-04-10",
+     "eventType": "Online",
+     "eventDay": "Tuesday",
+     "startTime": "10:00 AM",
+     "endTime": "4:00 PM",
+     "speakers": ["Dr. Data Smith", "Prof. Algo Johnson"],
+     "host": "Any Institute",
+     "details": "An in-depth seminar on modern data algorithms and their applications.",
+     "eventImageUrl": "https://example.com/data-algorithms-seminar.jpg",
+     "eventTags": ["Marketing", "Seminar", "Technology", "Online Event","Live"],
+     "pricing": 4000.00,
+     "address": "at your comfortable place, sweet home.", 
+     "dressCode": "Casual",
+     "ageRestriction": "18+"
+   }
+
+]

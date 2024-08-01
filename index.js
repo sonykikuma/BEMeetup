@@ -22,6 +22,11 @@ const jsonData = fs.readFileSync("events.json","utf8")
 
 const eventsData = JSON.parse(jsonData)
 
+
+app.get("/", (req,res)=>{
+  res.send("Hello Express!")
+})
+
 function seedData() {
   try {
     for (const eventData of eventsData) {

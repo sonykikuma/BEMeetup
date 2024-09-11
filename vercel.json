@@ -1,10 +1,7 @@
 {
   "version": 2,
   "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-  "rewrites": [{ "source": "/(.*)", "destination": "index.js", 
-  "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-}],
+  "rewrites": [{ "source": "/(.*)", "destination": "index.js" }],
   "buildCommand": "next build",
   "cleanUrls": true
-
 }

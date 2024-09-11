@@ -18,42 +18,42 @@ const Event = require('./models/event.models')
 app.use(express.json())
 
  initializeDatabase();
-const jsonData = fs.readFileSync("events.json","utf8")
+// const jsonData = fs.readFileSync("events.json","utf8")
 
-const eventsData = JSON.parse(jsonData)
+// const eventsData = JSON.parse(jsonData)
 
 
 app.get("/", (req,res)=>{
   res.send("Hello Express!")
 })
 
-function seedData() {
-  try {
-    for (const eventData of eventsData) {
-      const newEvent = new Event({
-        title: eventData.title,
-          eventDate: eventData.eventDate,
-          eventType: eventData.eventType,
-          eventDay: eventData.eventDay,
-          startTime: eventData.startTime,
-          endTime: eventData.endTime,
-          speakers: eventData.speakers,
-          host: eventData.host,
-        details:eventData.details,
-          eventImageUrl: eventData.eventImageUrl,
-        eventTags:eventData.eventTags,
-        pricing: eventData.pricing,
-        address:eventData.address,
-        dressCode:eventData.dressCode,
-        ageRestriction:eventData.ageRestriction
-      });
-      newEvent.save();
-      console.log("new event", newEvent.title);
-    }
-  } catch (error) {
-    console.log("error seeding the data", error);
-  }
-}
+// function seedData() {
+//   try {
+//     for (const eventData of eventsData) {
+//       const newEvent = new Event({
+//         title: eventData.title,
+//           eventDate: eventData.eventDate,
+//           eventType: eventData.eventType,
+//           eventDay: eventData.eventDay,
+//           startTime: eventData.startTime,
+//           endTime: eventData.endTime,
+//           speakers: eventData.speakers,
+//           host: eventData.host,
+//         details:eventData.details,
+//           eventImageUrl: eventData.eventImageUrl,
+//         eventTags:eventData.eventTags,
+//         pricing: eventData.pricing,
+//         address:eventData.address,
+//         dressCode:eventData.dressCode,
+//         ageRestriction:eventData.ageRestriction
+//       });
+//       newEvent.save();
+//       console.log("new event", newEvent.title);
+//     }
+//   } catch (error) {
+//     console.log("error seeding the data", error);
+//   }
+// }
 
 //seedData();
 
